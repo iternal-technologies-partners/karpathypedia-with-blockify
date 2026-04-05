@@ -1,6 +1,27 @@
 # Karpathypedia
 
-**LLM-Powered Knowledge Base with Blockify IdeaBlocks + Graph-Driven Wiki Compilation**
+<!--
+GenAI Image Prompt (use with Midjourney, DALL-E, Ideogram, etc.):
+
+A 3D isometric flowchart infographic showing a document processing pipeline on a clean white background. The flow moves left to right with five distinct stages connected by glowing blue animated arrows.
+
+Stage 1 - "RAW DOCUMENTS": A stack of 3D floating document icons (PDFs, markdown files, text files) in warm neutral tones, slightly scattered, with a subtle drop shadow. A label reads "Raw Documents" underneath.
+
+Stage 2 - "BLOCKIFY INGEST": A sleek 3D machine/processor block in metallic blue with the text "Blockify" on it. Documents feed into the left side. On the right side, small glowing cube blocks emerge — these are "IdeaBlocks", each a small 3D rounded cube with a question mark icon on one face and a checkmark on the other, colored in gradient blue-to-teal. Label: "Atomic IdeaBlocks (Q&A Pairs)".
+
+Stage 3 - "DISTILL & DEDUPLICATE": A 3D funnel or compression chamber in silver/chrome. Many IdeaBlock cubes enter the top, fewer refined golden cubes exit the bottom. Small duplicate cubes fade out with a transparency effect showing deduplication. A percentage badge shows "60-70% reduction". Label: "Distillation".
+
+Stage 4 - "GRAPH & CLUSTER": A 3D network graph visualization floating in space — nodes are glowing IdeaBlock cubes connected by thin luminous lines. Distinct color-coded clusters (purple, green, orange, blue) show Louvain community detection groupings. The clusters are slightly separated in 3D space. Label: "Louvain Community Detection".
+
+Stage 5 - "WIKI ARTICLES": A 3D open book or Wikipedia-style page layout with clean typography, showing interconnected article pages fanning out. Cross-reference lines connect between pages. A small Claude AI logo/sparkle icon sits above indicating AI-authored content. Label: "Wikipedia-Style Wiki".
+
+Style: Clean corporate 3D illustration, isometric perspective, soft shadows, gradient lighting from top-left, modern SaaS product aesthetic. Color palette: whites, blues (#3366CC), teals, with gold accents for refined/distilled elements. No text except labels. Professional, technical but approachable. 4K resolution, wide 16:9 aspect ratio.
+-->
+
+![Karpathypedia Pipeline](docs/pipeline-flowchart.png)
+*Raw Documents → Blockify Ingest → Distillation → Graph Clustering → Wiki Articles*
+
+**Blockify Powered Knowledge Base with IdeaBlocks + Graph-Driven Wiki Compilation**
 
 Inspired by [Andrej Karpathy's concept](https://x.com/karpathy) of LLM-compiled knowledge bases, Karpathypedia transforms raw documents into a Wikipedia-style wiki through a structured pipeline. Rather than asking an LLM to generate articles from scratch, it first decomposes source material into atomic Q&A units (IdeaBlocks), builds a similarity graph, detects topical communities, and then assembles encyclopedic articles grounded in verified knowledge atoms.
 
