@@ -1,26 +1,71 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --wiki-bg: #FFFFFF;
+  --wiki-text: #202122;
+  --wiki-link: #0645AD;
+  --wiki-link-hover: #0B0080;
+  --wiki-border: #A2A9B1;
+  --wiki-light-bg: #F8F9FA;
+  --wiki-tag-bg: #EAECF0;
+  --wiki-accent: #3366CC;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-wiki-bg: var(--wiki-bg);
+  --color-wiki-text: var(--wiki-text);
+  --color-wiki-link: var(--wiki-link);
+  --color-wiki-link-hover: var(--wiki-link-hover);
+  --color-wiki-border: var(--wiki-border);
+  --color-wiki-light-bg: var(--wiki-light-bg);
+  --color-wiki-tag-bg: var(--wiki-tag-bg);
+  --color-wiki-accent: var(--wiki-accent);
+  --color-wiki-sidebar-bg: var(--wiki-light-bg);
+  --font-serif: 'Linux Libertine', 'Georgia', 'Times', serif;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--wiki-bg);
+  color: var(--wiki-text);
+  font-family: 'Linux Libertine', 'Georgia', 'Times', serif;
+  line-height: 1.6;
 }
+
+/* Wikipedia-style content typography */
+.wiki-content h1 { font-size: 1.8em; border-bottom: 1px solid var(--wiki-border); padding-bottom: 0.25em; margin-top: 1em; }
+.wiki-content h2 { font-size: 1.5em; border-bottom: 1px solid var(--wiki-border); padding-bottom: 0.2em; margin-top: 1em; }
+.wiki-content h3 { font-size: 1.2em; margin-top: 0.8em; }
+.wiki-content p { margin: 0.5em 0; }
+.wiki-content a { color: var(--wiki-link); text-decoration: none; }
+.wiki-content a:hover { text-decoration: underline; color: var(--wiki-link-hover); }
+.wiki-content ul, .wiki-content ol { padding-left: 1.5em; margin: 0.5em 0; }
+.wiki-content blockquote { border-left: 3px solid var(--wiki-border); padding-left: 1em; margin: 1em 0; color: #555; }
+.wiki-content table { border-collapse: collapse; margin: 1em 0; }
+.wiki-content th, .wiki-content td { border: 1px solid var(--wiki-border); padding: 0.4em 0.8em; }
+.wiki-content th { background: var(--wiki-light-bg); }
+.wiki-content code { background: var(--wiki-light-bg); padding: 0.15em 0.3em; border-radius: 3px; font-size: 0.9em; }
+.wiki-content pre { background: var(--wiki-light-bg); padding: 1em; border-radius: 4px; overflow-x: auto; border: 1px solid var(--wiki-border); }
+.wiki-content pre code { background: none; padding: 0; }
+
+/* Wikipedia-style heading fonts */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Linux Libertine', 'Georgia', 'Times', serif;
+}
+
+/* Wikipedia-style link defaults */
+a {
+  color: var(--wiki-link);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+  color: var(--wiki-link-hover);
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Sans-serif for UI elements */
+.ui-text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
